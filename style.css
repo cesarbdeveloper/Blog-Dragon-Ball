@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@500&display=swap');
+
+:root {
+    --primary-color: #FFD700; 
+    --secondary-color: #CC0000; 
+    --text-color: #333;
+    --light-text-color: #666;
+    --background-color: #f4f4f4;
+    --dark-background: #222;
+    --footer-background: #111;
+    --card-background: #fff;
+    --border-color: #ddd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+header {
+    background: var(--dark-background);
+    color: #fff;
+    padding: 1rem 0;
+    border-bottom: 5px solid var(--primary-color);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+header nav ul li a:hover {
+    color: var(--dark-background);
+    background-color: var(--primary-color);
+}
+
+.hero-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.hero-section h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    color: var(--light-text-color);
+}
+
+.hero-section img {
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+main {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 40px;
+    flex-grow: 1;
+}
+
+.blog-posts {
+    flex: 3;
+}
+
+.blog-posts h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    color: var(--dark-background);
+    margin-bottom: 30px;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+.post-card {
+    background-color: var(--card-background);
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.post-card h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.post-meta {
+    font-size: 0.9em;
+    color: var(--light-text-color);
+    margin-bottom: 15px;
+}
+
+.post-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.post-card p {
+    margin-bottom: 15px;
+}
+
+.read-more {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--dark-background);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+}
+
+.sidebar {
+    flex: 1; /* Ocupa 1 parte del espacio */
+    background-color: var(--card-background);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    align-self: flex-start; /* Asegura que la barra lateral no se estire */
+}
+
+.sidebar .widget {
+    margin-bottom: 30px;
+    border-bottom: 1px dashed var(--border-color);
+    padding-bottom: 20px;
+}
+
+.sidebar .widget:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.sidebar .widget h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    color: var(--dark-background);
+    margin-bottom: 15px;
+    border-left: 5px solid var(--primary-color);
+    padding-left: 10px;
+}
+
+.sidebar .widget ul {
+    list-style: none;
+}
+
+.sidebar .widget ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar .widget ul li a {
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.sidebar .widget ul li a:hover {
+    color: var(--primary-color);
+    padding-left: 5px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    background: var(--footer-background);
+    color: #FFD700;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+    border-top: 5px solid var(--secondary-color);
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header nav ul li {
+        margin: 0 10px 10px 10px; /* Ajusta el margen para pantallas pequeñas */
+    }
+
+    main.container {
+        flex-direction: column;
+    }
+
+    .blog-posts, .sidebar {
+        flex: auto; /* Ocupa todo el ancho disponible */
+        width: 100%; /* Asegura que ocupen el 100% del ancho */
+    }
+
+    .hero-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .post-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .sidebar {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section h2 {
+        font-size: 2rem;
+    }
+
+    .post-card {
+        padding: 15px;
+    }
+
+    .read-more {
+        width: 100%;
+        text-align: center;
+    }
+}
